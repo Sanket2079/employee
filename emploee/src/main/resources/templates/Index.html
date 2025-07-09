@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <link rel="stylesheet" th:href="@{style.css}">
+</head>
+<body>
+    <h1>Employee Form</h1>
+    <form th:action="@{/submit-form}" method="post">
+        <label for="empId">Employee ID:</label><br>
+        <input type="text" id="empId" name="id" required><br><br>
+
+        <label for="empName">Name:</label><br>
+        <input type="text" id="empName" name="name" required><br><br>
+
+        <label for="department">Department:</label><br>
+        <input type="text" id="department" name="department" required><br><br>
+
+        <label for="salary">Salary:</label><br>
+        <input type="number" id="salary" name="salary" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
